@@ -1,0 +1,35 @@
+.containerMovie{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.posterMovie{
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px grey;
+    margin-right: 20px;
+}
+
+.descriptionMovie{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titleMovie{
+    color: steelblue;
+    font-size: 22px;
+}
+
+.synopsisMovie{
+    color: dimgray;
+    font-size: medium;
+}
+
+.detailsMovie{
+    color: dimgray;
+    font-weight: bold;
+}
