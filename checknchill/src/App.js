@@ -1,12 +1,16 @@
 import React from 'react';
-import Home from "./components/Home/Home";
+
+import Weather from './components/weather/Weather'
 
 
 
 class App extends React.Component {
   render(){
     return (
-          <Home />
+      <div className="App">
+          <Weather/>
+      </div>
+
     );
   }
 }
