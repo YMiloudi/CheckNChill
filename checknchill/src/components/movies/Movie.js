@@ -11,14 +11,13 @@ class Movie extends Component{
         return(
             <div className='containerMovie'>
                 <div>
-                    <img className='posterMovie' src={this.props.movie.poster}/>
+                    <img className='posterMovie' src={this.props.movies.poster}/>
                 </div>
                 <div className='descriptionMovie'>
-                    <h2 className='titleMovie'>{this.props.movie.title}</h2>
-                    <p className='detailsMovie'>{this.props.movie.production_year}</p>
-                    <p className='detailsMovie'>{this.props.movie.genres}</p>
-                    <p className='synopsisMovie'>{this.props.movie.synopsis}</p>
-                    
+                    <h2 className='titleMovie'>{this.props.movies.title}</h2>
+                    <p className='detailsMovie'>{this.props.movies.production_year}</p>
+                    <p className='detailsMovie'>{this.props.movies.genres}</p>
+                    <p className='synopsisMovie'>{this.props.movies.synopsis}</p>
                 </div>
             </div>
         )
