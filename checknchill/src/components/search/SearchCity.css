@@ -1,0 +1,15 @@
+@media screen and (max-width: 599px) {
+    #nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #0388A6;
+        padding: 20 0;
+    }
+    #searchBar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
