@@ -4,15 +4,15 @@ import './Weather.css';
 
 const Weather = () => {
 
-    const[weather, setWeather] = useState({});
+    const[weather, setWeather] = useState(null);
 
     useEffect(() => {
-        fetch("http://api.openweathermap.org/data/2.5/weather?q=Brussels&units=metric&APPID=f4256cf32470ba990948dc5ecba800de")
+        fetch("http://api.openweathermap.org/data/2.5/weather?q=" + this.props.searchValue + "&units=metric&APPID=f4256cf32470ba990948dc5ecba800de")
             .then((resp)=>resp.json())
             .then((data) => setWeather(data));
     });
-    
-    
+
+  
    function dateBuilder(d){
         let months= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
