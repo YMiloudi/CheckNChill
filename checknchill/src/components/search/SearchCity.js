@@ -19,7 +19,7 @@ const SearchCity = (props) => {
             this.setState=({searchValue:event.target.value})
         }*/
 
-    function searchBtnHanbleClick () {
+    function searchBtnHanbleClick (){
         props.onSearch(searchValue)
     }
 
