@@ -1,5 +1,6 @@
 
 import React, {useState} from 'react';
+import DontForget from '../dontforget/DontForget';
 import SearchCity from '../search/SearchCity';
 import './Weather.css';
 
@@ -59,6 +60,9 @@ const Weather = (props) => {
                                 </div>
                             </div>
                         </div>
+
+                        <DontForget 
+                            title={weather.main.temp}/>
 
                     </>
                         
