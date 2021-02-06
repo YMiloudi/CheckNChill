@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Movie from './Movie';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
+import './MoviesList.css'
 
 
 function MoviesList(){
@@ -15,11 +16,11 @@ function MoviesList(){
     },[]);
 
     return(
-        <div style={{ width: "60%", margin: "auto", padding: "50px"}}>
-            <AwesomeSlider>
+        <div>
+            <AwesomeSlider className='divMoviesList'>
                 {movies != null && (
                     movies.map((film)=>(
-                        <div style={{backgroundColor:'white'}}>
+                        <div>
                             <Movie movies={film}/>
                         </div>
                     ))  

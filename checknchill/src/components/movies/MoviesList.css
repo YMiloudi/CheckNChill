@@ -1,0 +1,8 @@
+.divMoviesList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: aqua !important;
+    width: 60%;
+
+}
