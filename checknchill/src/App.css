@@ -1,0 +1,17 @@
+.imgCold{
+    background-image: url(assets/coldWeather.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0,2;
+    
+}
+
+.imgHot{
+    background-image: url(assets/warmWeather.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0,2;
+}
