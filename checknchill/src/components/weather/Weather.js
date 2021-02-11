@@ -1,6 +1,12 @@
 
 import React, {useState} from 'react';
-import SearchCity from '../search/SearchCity'; // Import du composant SearchCity
+
+
+import DontForget from '../dontforget/DontForget';
+import SearchCity from '../search/SearchCity';
+
+
+
 import './Weather.css';
 
 const Weather = (props) => {
@@ -65,6 +71,9 @@ const Weather = (props) => {
                                 </div>
                             </div>
                         </div>
+
+                        <DontForget 
+                            title={weather.main.temp}/>
 
                     </>
                         
