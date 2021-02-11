@@ -5,22 +5,8 @@ import React, { useState } from "react";
 const SearchCity = (props) => {
     const [searchValue, setSearchValue]=useState("");
 
-    /*class SearchCity extends Component {
-        
-        constructor(props){
-            super(props);
-
-            this.state={
-                searchValue:""
-            }
-        }
-        
-        searchInputHandlechange = (event) => {
-            this.setState=({searchValue:event.target.value})
-        }*/
-
-    function searchBtnHanbleClick (){
-        props.onSearch(searchValue)
+    function searchBtnHandleClick (){ //le searchBtnHandleClick va récupérer l'input lors du clique
+        props.onSearch(searchValue) //La valeur de l'input est récupérée 
     }
 
     return(
@@ -32,7 +18,7 @@ const SearchCity = (props) => {
                         type="text" 
                         placeholder="Chose your city" 
                         value={searchValue} />
-                    <button onClick={()=>searchBtnHanbleClick()}>search</button>
+                    <button onClick={()=>searchBtnHandleClick()}>search</button>
                 </div>
         </div>
     )
