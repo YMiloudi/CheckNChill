@@ -1,41 +1,17 @@
-
-
-.classHot{
-    background-image: url("https://media.giphy.com/media/bcJvDLgxVSPulkDYB4/giphy.gif");
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    width: 100%;
+.gif{
+    width: auto;
     height: 350px;
-    background-size: cover
-}
-
-.classCold{
-    background-image: url("https://media.giphy.com/media/Fod1Ofcq3dEys/giphy.gif");
-    background-repeat: no-repeat;
     border-radius: 10px;
-    width: 100%;
+    box-shadow: 0px 5px 20px white;
+    margin-left: 300px;
+    min-width: 40%;
+    }
+
+.vetement{
+    width: auto;
     height: 350px;
-    background-size: cover
-    
-}
-
-.imgHot{
-    background-image: url('./images/classhot.png');
     border-radius: 10px;
-    width: 100%;
-    height: 180px;
-    background-size: cover;
-    margin-bottom: 100px;
+    box-shadow: 0px 5px 20px white;
+    margin-left: 100px;
+    min-width: 40%;
 }
-    
-
-.imgCold{
-    background-image: url('./images/classcold.png');
-    border-radius: 10px;
-    width: 100%;
-    height: 180px;
-    background-size: cover;
-    margin-bottom: 100px;
-
-}
-
