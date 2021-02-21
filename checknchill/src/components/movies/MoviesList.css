@@ -1,8 +1,5 @@
-.divMoviesList{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: aqua !important;
-    width: 60%;
-
-}
+  /* carousel Slider Slick */
+  .carouselSlider {
+    width: 100%;
+    margin-bottom: 2%;
+  }

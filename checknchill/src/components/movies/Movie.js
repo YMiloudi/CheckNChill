@@ -9,15 +9,14 @@ class Movie extends Component{
 
     render(){
         return(
-            <div className='containerMovie'>
-                <div>
-                    <img className='posterMovie' src={this.props.movies.poster}/>
-                </div>
-                <div className='descriptionMovie'>
-                    <h2 className='titleMovie'>{this.props.movies.title}</h2>
-                    <p className='detailsMovie'>{this.props.movies.production_year}</p>
-                    <p className='detailsMovie'>{this.props.movies.genres}</p>
-                    <p className='synopsisMovie'>{this.props.movies.synopsis}</p>
+            <div className='effect'>
+                <div className='transition'>
+                    <img src={this.props.movie.poster || 'https://pictures.betaseries.com/films/affiches/original/68126.jpg'} alt={this.props.movie.title} className='imageSlide'/>
+                    <div className='overlay'>
+                        <p className='text'>
+                            <h4 className='titleImage'>{this.props.movie.title}</h4>
+                        </p>
+                    </div>
                 </div>
             </div>
         )
