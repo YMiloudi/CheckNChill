@@ -1,41 +1,7 @@
-
-
-.classHot{
-    background-image: url("https://media.giphy.com/media/bcJvDLgxVSPulkDYB4/giphy.gif");
-    background-repeat: no-repeat;
-    border-radius: 10px;
+.gif{
     width: 100%;
-    height: 350px;
-    background-size: cover
 }
 
-.classCold{
-    background-image: url("https://media.giphy.com/media/Fod1Ofcq3dEys/giphy.gif");
-    background-repeat: no-repeat;
-    border-radius: 10px;
+.vetement{
     width: 100%;
-    height: 350px;
-    background-size: cover
-    
 }
-
-.imgHot{
-    background-image: url('./images/classhot.png');
-    border-radius: 10px;
-    width: 100%;
-    height: 180px;
-    background-size: cover;
-    margin-bottom: 100px;
-}
-    
-
-.imgCold{
-    background-image: url('./images/classcold.png');
-    border-radius: 10px;
-    width: 100%;
-    height: 180px;
-    background-size: cover;
-    margin-bottom: 100px;
-
-}
-

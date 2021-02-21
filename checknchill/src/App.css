@@ -1,9 +1,8 @@
 .imgCold{
     background-image: url(assets/coldWeather.jpg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat repeat; 
     background-size: cover;
-    opacity: 0,2;
     
 }
 
@@ -11,7 +10,6 @@
     background-image: url(assets/warmWeather.jpg);
     height: 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat repeat;
     background-size: cover;
-    opacity: 0,2;
 }

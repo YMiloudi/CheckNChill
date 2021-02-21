@@ -1,6 +1,7 @@
 import React from 'react';
 import Weather from './components/weather/Weather';
-import './App.css'
+import './App.css';
+import Quotes from './components/dontforget/Quotes';
 
 
 
@@ -28,6 +29,9 @@ class App extends React.Component {
       <div className={this.state.classImg}> {/*Création du state classImg qui définit la div temp*/}
         
         <Weather onDataSearch={(temp)=>this.getImgByTemp(temp)}/> {/*onDataSearchs => Fonction qui va récup la data img*/}
+
+        <Quotes/>
+        
       </div>
 
     );
