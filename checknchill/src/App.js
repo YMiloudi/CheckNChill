@@ -1,5 +1,6 @@
 import React from 'react';
 import Weather from './components/weather/Weather';
+import MoviesList from './components/movies/MoviesList';
 import './App.css'
 
 
@@ -26,7 +27,7 @@ class App extends React.Component {
   render(){
     return (
       <div className={this.state.classImg}> {/*Création du state classImg qui définit la div temp*/}
-        
+        <MoviesList/>
         <Weather onDataSearch={(temp)=>this.getImgByTemp(temp)}/> {/*onDataSearchs => Fonction qui va récup la data img*/}
       </div>
 
