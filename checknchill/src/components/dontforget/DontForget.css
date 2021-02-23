@@ -5,3 +5,19 @@
 .vetement{
     width: 100%;
 }
+    width: auto;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px white;
+    margin-left: 300px;
+    min-width: 40%;
+    }
+
+.vetement{
+    width: auto;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px white;
+    margin-left: 100px;
+    min-width: 40%;
+}

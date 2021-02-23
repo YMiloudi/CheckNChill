@@ -5,13 +5,15 @@ import ClassHot from "./classhot.png";
 
 
 function DontForget(props){
+
     function getImage(){
-        if(props.title >16){
-            return <img src={ClassCold} className="vetement"/>;
-        }else{
+        if(props.title >18){
             return <img src={ClassHot} className="vetement"/>;
+        }else{
+            return <img src={ClassCold} className="vetement"/>;
         }
     }
+
     function getGif(){
         if(props.title >16){
             return <img src="https://media.giphy.com/media/bcJvDLgxVSPulkDYB4/giphy.gif" className="gif"/>
