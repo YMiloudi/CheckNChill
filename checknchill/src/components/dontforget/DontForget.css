@@ -1,4 +1,10 @@
 .gif{
+    width: 100%;
+}
+
+.vetement{
+    width: 100%;
+}
     width: auto;
     height: 350px;
     border-radius: 10px;

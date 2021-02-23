@@ -6,7 +6,6 @@ import ClassHot from "./classhot.png";
 
 function DontForget(props){
 
-  
     function getImage(){
         if(props.title >18){
             return <img src={ClassHot} className="vetement"/>;
@@ -22,7 +21,6 @@ function DontForget(props){
             return <img src="https://media.giphy.com/media/Fod1Ofcq3dEys/giphy.gif" className="gif"/>;
         }
     }
-    
     return(
         <div className="dontFrget">
             <div>
@@ -34,13 +32,8 @@ function DontForget(props){
                 {
                     getImage()
                 }
-                
             </div>
-        
         </div>
     )
-
-
 }
-
 export default DontForget;
