@@ -51,31 +51,31 @@ const Weather = (props) => {
                     {
                         weather != null &&
                         
-                        <>
-                        <div className="location-box">
-                            <div className="location">
-                                {weather.name}, {weather.sys.country}
-    
-                                <div className="date">
-                                    <h1>{dateBuilder(new Date())}</h1>
-                                </div>  
-                            </div>
-                        </div>
-
-                        <div className="weather-box">
-                            <div className="temp">
-                               <p>{Math.round(weather.main.temp)}°C </p> 
-                            
-                                <div className="weather">
-                                    {weather.weather[0].main}
+                        <div id="meteoBox">
+                            <div className="location-box">
+                                <div className="location">
+                                    {weather.name}, {weather.sys.country}
+        
+                                    <div className="date">
+                                        <h1>{dateBuilder(new Date())}</h1>
+                                    </div>  
                                 </div>
                             </div>
+
+                            <div className="weather-box">
+                                <div className="temp">
+                                <p>{Math.round(weather.main.temp)}°C </p> 
+                                
+                                    <div className="weather">
+                                        {weather.weather[0].main}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <DontForget 
+                                title={weather.main.temp}/>
+
                         </div>
-
-                        <DontForget 
-                            title={weather.main.temp}/>
-
-                    </>
                         
                     }
                 
