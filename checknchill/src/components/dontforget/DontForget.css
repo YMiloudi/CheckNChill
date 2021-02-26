@@ -1,23 +1,30 @@
 .gif{
-    width: 100%;
+    width: 50%;
+}
+
+#getimage{
+    align-content: center;
+}
+
+.dontFrget {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(145, 210, 270, 0.8);
+    padding: 20px;
+    margin: 75px 250px 75px 250px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 3px rgb(36, 36, 36);
+    border: 3px solid #F2DF80;
+    max-width: 800px;
+    height: 400px;
 }
 
 .vetement{
-    width: 100%;
-}
-    width: auto;
-    height: 350px;
+    width: 500px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 5px 20px white;
-    margin-left: 300px;
     min-width: 40%;
     }
-
-.vetement{
-    width: auto;
-    height: 350px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px white;
-    margin-left: 100px;
-    min-width: 40%;
-}

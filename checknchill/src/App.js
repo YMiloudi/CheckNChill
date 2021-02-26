@@ -28,10 +28,12 @@ class App extends React.Component {
   render(){
     return (
       <div className={this.state.classImg}> {/*Création du state classImg qui définit la div temp*/}
-        <MoviesList/>
+        
         <Weather onDataSearch={(temp)=>this.getImgByTemp(temp)}/> {/*onDataSearchs => Fonction qui va récup la data img*/}
 
         <Quotes/>
+
+        <MoviesList/>
         
       </div>
 

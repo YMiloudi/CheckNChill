@@ -5,7 +5,10 @@ import React, {useState} from 'react';
 import DontForget from '../dontforget/DontForget';
 import SearchCity from '../search/SearchCity';
 
+import {FaTemperatureHigh} from 'react-icons/fa';
+import {TiWeatherWindyCloudy} from 'react-icons/ti';
 
+import Clouds from "./clouds.png";
 
 import './Weather.css';
 
@@ -46,38 +49,55 @@ const Weather = (props) => {
    
     return(
             <main> 
-                    <SearchCity onSearch= {(cityValue) => getInfoByCityName(cityValue)}/> 
-                    
-                    {
-                        weather != null &&
-                        
-                        <>
-                        <div className="location-box">
-                            <div className="location">
-                                {weather.name}, {weather.sys.country}
-    
-                                <div className="date">
-                                    <h1>{dateBuilder(new Date())}</h1>
-                                </div>  
-                            </div>
-                        </div>
-
-                        <div className="weather-box">
-                            <div className="temp">
-                               <p>{Math.round(weather.main.temp)}°C </p> 
-                            
-                                <div className="weather">
-                                    {weather.weather[0].main}
+                <SearchCity onSearch= {(cityValue) => getInfoByCityName(cityValue)}/> 
+                
+                {
+                    weather != null &&
+                    <>
+                        <div id="meteoBox">
+                            <div className="location-box">
+                                <div className="location">
+                                    
+                                    <div className="date">
+                                        <h2>{dateBuilder(new Date())}</h2>
+                                    </div> 
+                                    
+                                    <h1>What's the weather like in <br />{weather.name}, {weather.sys.country} ?</h1>
+     
                                 </div>
                             </div>
-                        </div>
+                            
+                            <div id="weatherContent">
+                                <div className="weather-box">
+                                                                
+                                    <div id="tempData">
+                                        <div className="temp">
+                                            <FaTemperatureHigh className="icons" />
+                                            <p className="weatherText"> {Math.round(weather.main.temp)}°C </p> 
+                                        </div>
+                                    
+                                        <div className="weather">
+                                            <TiWeatherWindyCloudy className="icons" />
+                                            <p className="weatherText"> {weather.weather[0].main} </p>
+                                        </div>
+                                    </div>
 
+                                    <img id="weatherIllu" src={Clouds} />
+                                    
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
                         <DontForget 
                             title={weather.main.temp}/>
-
-                    </>
+                            
                         
-                    }
+                    </>
+                    
+                    
+                }
                 
             </main>   
         );
