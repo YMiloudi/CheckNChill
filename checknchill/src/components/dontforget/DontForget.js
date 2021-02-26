@@ -23,12 +23,15 @@ function DontForget(props){
     }
     return(
         <div className="dontFrget">
-            <div>
+            <h1>so don't forget...</h1>
+            {/* 
+            <div id="getgif">
                 {
                     getGif()
                 }
             </div>
-            <div>
+            */} 
+            <div id="getimage">
                 {
                     getImage()
                 }

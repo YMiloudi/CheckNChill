@@ -25,12 +25,6 @@
     align-items: flex-start;
 }
 
-p{
-    color: #fff; 
-    font-size: 17px;
-    word-wrap: break-word;
-}
-
 .quoteText{
     color:#fff;
     font-size: 25px;
