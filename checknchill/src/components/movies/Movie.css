@@ -1,16 +1,23 @@
 /*Div globale de la page */
 .effect {
     position: relative;
-    width: 100%;
+    width: 50%;
+    margin: 0px !important;
 }
-  
+
 .effect:hover .overlay {
     height: 100%;
 }
 
+.slick-list{
+    width: 700px !important;
+    height: 400px !important;
+    margin-left: 30px !important;
+}
+
 /*hover slide movie */
 .transition {
-    width: calc(18.5rem / 1.2);
+    width: 200px;
     border-radius: 0.4rem;
 }
   
@@ -33,6 +40,9 @@
     border-radius: 0.4rem;
     margin-top: 2%;
     margin-right: 1%;
+
+    width: 200px !important;
+    height: auto !important;
 }
 
 /* Bande titre slider movie */
@@ -49,11 +59,10 @@
 }
 
 .text {
-    color: white;
+    color: white !important;
     font-size: 1.5rem;
     position: absolute;
     top: 10%;
-    bottom: -80%;
     left: 15%;
     right: 15%;
     -webkit-transform: translate(-50%, -50%);

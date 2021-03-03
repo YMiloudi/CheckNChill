@@ -2,8 +2,6 @@ import React from 'react';
 import Weather from './components/weather/Weather';
 import './App.css';
 import Quotes from './components/dontforget/Quotes';
-import MoviesList from './components/movies/MoviesList';
-
 
 
 class App extends React.Component {
@@ -31,18 +29,10 @@ class App extends React.Component {
         
         <Weather onDataSearch={(temp)=>this.getImgByTemp(temp)}/> {/*onDataSearchs => Fonction qui va récup la data img*/}
 
-        <Quotes/>
-
-        <MoviesList/>
-        
       </div>
 
     );
   }
 }
-
-//
-
-
 
 export default App;

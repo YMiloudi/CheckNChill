@@ -1,4 +1,4 @@
-.imgCold{
+/*.imgCold{
     background-image: url(assets/coldWeather.jpg);
     background-position: center;
     background-repeat: repeat repeat; 
@@ -12,4 +12,12 @@
     background-position: center;
     background-repeat: repeat repeat;
     background-size: cover;
+}*/
+
+.imgCold{
+    background-color: #f2df80;
+}
+
+.imgHot{
+    background-color: #f2df80;
 }
