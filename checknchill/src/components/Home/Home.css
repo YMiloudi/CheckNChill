@@ -1,0 +1,38 @@
+.ContainerAboutTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: large;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .ContainerAboutBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: large;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #imageAbout {
+    height: 400px;
+  }
+
+  #titleAbout {
+    font-family: "Brush Script MT", cursive;
+    font-size: 2em;
+    font-style: bold;
+  }
+  
+  #textAbout {
+    font-family: "Montserrat", sans-serif !important;
+    color: black;
+    font-size: 1em;
+    line-height: 2em;
+  }
