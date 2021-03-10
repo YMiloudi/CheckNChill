@@ -6,11 +6,30 @@ import DontForget from '../dontforget/DontForget';
 import SearchCity from '../search/SearchCity';
 
 import {FaTemperatureHigh} from 'react-icons/fa';
-import {TiWeatherWindyCloudy} from 'react-icons/ti';
 
-import Clouds from "./clouds.png";
+import Lottie from 'react-lottie';
+import animationData from '../../clouds.json'; 
+import animationDataSunny from '../../sunny.json'; 
 
 import './Weather.css';
+
+const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+
+  const defaultOptionsSunny = {
+    loop: true,
+    autoplay: true,
+    animationData: animationDataSunny,
+    rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+    }
+  };
 
 const Weather = (props) => {
 
@@ -40,13 +59,28 @@ const Weather = (props) => {
 
    function onDataRetrieved(data){ // Création de fonction, pour passer plusieurs lignes 
         setWeather(data);
-       props.onDataSearch(data.main.temp) //va récupérer la data de la température (L'évènement est soulevé)
    }
 
    //SearchCity va récup le onSearch (valeur de l'input), on lui assigne une valeur. Cette valeur va être utiliser dans une fonction
 // qui elle va faire un fetch avec l'API et afficher la data. 
         
-   
+    function getLottie(){
+        if(weather.main.temp >= 15){
+            return <Lottie 
+            options={defaultOptionsSunny}
+            height={300}
+            width={300}
+            />
+            }else{
+            return <Lottie 
+            options={defaultOptions}
+            height={300}
+            width={300}
+            />
+                }
+            }
+    
+
     return(
             <main> 
                 <SearchCity onSearch= {(cityValue) => getInfoByCityName(cityValue)}/> 
@@ -77,12 +111,12 @@ const Weather = (props) => {
                                         </div>
                                     
                                         <div className="weather">
-                                            <TiWeatherWindyCloudy className="icons" />
                                             <p className="weatherText"> {weather.weather[0].main} </p>
+                                            <div>
+                                                {getLottie()}
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <img id="weatherIllu" src={Clouds} />
                                     
                                     
                                 </div>

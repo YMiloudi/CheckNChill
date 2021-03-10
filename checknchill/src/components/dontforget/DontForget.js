@@ -3,7 +3,6 @@ import './DontForget.css';
 import ClassCold from "./classcold.png";
 import ClassHot from "./classhot.png";
 
-
 function DontForget(props){
 
     function getImage(){
@@ -36,6 +35,8 @@ function DontForget(props){
                     getImage()
                 }
             </div>
+
+
         </div>
     )
 }
