@@ -1,59 +1,110 @@
-*{
-   box-sizing: border-box; 
-   margin: 0;
-   padding: 0;
+#quoteBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center !important;
+
 }
 
-.quoteContainer{
-    min-height: 50vh;
-    display: flex;
-    background-color: aliceblue;
+/*Box quotes intégré dans le box Don't forget*/
+hr {
+    width: 450px;
+    margin-bottom: 30px;
+    border-top: solid 2px #d97e4a;
+    
 }
 
 .quote{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-content: flex-end !important;
     margin: auto;
-    width: 100%;
-    max-width: 400px;
-    min-height: 180px;
-    padding: 30px;
-    background: lightblue;
+    width: 700px;
     border-radius: 4px;
     box-shadow: 4px 4px 1px rgba(0, 0, 0, 0,5);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 0px 20px;
 }
 
-.quoteText{
-    color:#fff;
-    font-size: 25px;
+#quoteContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#quoteIcon svg{
+    color: #d97e4a;
+    font-size: 55px;
+    padding-top: 0px !important;
+    margin-right: 20px;
+}
+
+#quoteIcon {
+    margin-right: 10px;
+}
+
+#quoteStence{
+    color: #024351;
+    font-weight: bold;
+    font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
+    padding-bottom: 5px;
 }
 
-p:last-of-type{
-    margin: 10px 0; 
+#quoteAuthor{
+    color: #024351;
+    font-style: italic;
+    font-size: 12px;
 }
 
-button{
-    border: 10px;
-    outline:rgba(0, 0, 0, 0,5);
-    margin-right: 12px;
+.btnContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-self: flex-end;
+    width: 160px;
+    height: 100%;
 }
 
-.btn{
-    background: lightsteelblue ;
-    color: #fff;
-    width: 100px;
-    padding: 7px 0;
-    font-size: 14px;
-    border-radius: 4px;
+.btnContainer p{
+    color: #024351;
+    font-style: italic;
+    font-size: 12px;
+    align-self: center;
+}
+
+#quoteBtn{
+    padding: 5px 1px 5px 1px;
+    width: 180px;
+    font-size: 15px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px !important;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
     cursor: pointer;
-    transition: all 700ms ease-in-out ;
+    background-color: #d97e4a;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(83, 83, 83);
 }
 
-.btn:hover{
-    background: #5a57ec;
+#quoteBtnIcon{
+    font-size: 25px;
+    vertical-align: middle;
+    font-weight: bolder;
 }
+
+#quoteBtn:hover{
+    box-shadow: none;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
 

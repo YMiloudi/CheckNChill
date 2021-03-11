@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import Weather from "../weather/Weather";
 import Quotes from '../dontforget/Quotes';
+
+
 import MoviesList from '../movies/MoviesList';
 import Maps from '../Map/Map';
 
-import Check from '../../assets/Check.png'
-import Chill from '../../assets/Chill.png'
+
+import Check from '../../assets/Check.png';
+import Chill from '../../assets/Chill.png';
 
 import '../Home/Home.css'
 import SearchCity from "../search/SearchCity";
@@ -22,14 +25,22 @@ const Home = () => {
     return(
         <div>
             <SearchCity onSearch={(searchValue) => isClicked(searchValue)}/> 
+
+            <h1 id="titleMain">CheckNChill</h1>
+            <p className="underText">The new app you were waiting for</p>
             <Maps/>
             {
                 isSearched == true &&
+                <>
                 <Weather cityValue = {searchValue}/> 
+                <Quotes/>
+                <MovieList/> 
+                </>
             }
 
             {
                 isSearched == false &&
+                <div>
                 <div className="ContainerAboutTop">
                     <img id="imageAbout" src={Check}/>
                     <div id="textAbout">
@@ -46,12 +57,14 @@ const Home = () => {
                         </br>That’s why we created this app, just for you!</p>
                         </p>
                     </div>
+                </div>
 
                     <div className="ContainerAboutBottom">
                         <div id="testAbout">
                             <h3 id="titleAbout">
                             Just check it... and chill ! 
                             </h3>
+                            <img id="imageAbout" src={Chill}/>
                             <p id="textAbout">
                             <p>
                             The application CheckNChill was created by an observation. 
@@ -66,7 +79,6 @@ const Home = () => {
                             CheckNChill is THE app that you need ! 
                             </p></p>
                         </div>
-                        <img id="imageAbout" src={Chill}/>
                     </div>
                 </div>
             }
