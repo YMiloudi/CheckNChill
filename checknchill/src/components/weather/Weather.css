@@ -15,6 +15,16 @@ main{
   padding: 25px;
 }
 
+.weatherP{
+  color: #aa0101;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0px 0px !important;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-align: center;
+}
+
 /*Tout le box weather : */
 #meteoBox {
   display: flex;
