@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect} from 'react';
 
 
@@ -57,7 +56,9 @@ const Weather = (props) => {
         .then((data) => onDataRetrieved(data));  //setWeather ne peut passer qu'une seule fonction. Donc, création d'une nouvelle fonction onDataRetrieved
       }, [])
 
-   function onDataRetrieved(data){ // Création de fonction, pour passer plusieurs lignes 
+   function onDataRetrieved(data){ // Création de fonction, pour passer plusieurs lignes
+       //console.log(data)
+       //console.log("test", weather != null && weather.cod != "404")  
         setWeather(data);
    }
 
@@ -85,8 +86,8 @@ const Weather = (props) => {
             <main> 
                 
                 {
-                    weather != null &&
-                    <>
+                    weather != null && weather.cod != "404" && (
+                        <>
                         <div id="meteoBox">
                             <div className="location-box">
                                 <div className="location">
@@ -116,25 +117,19 @@ const Weather = (props) => {
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    
                                 </div>
-                                
                             </div>
                         </div>
                         
                         <DontForget 
                             title={weather.main.temp}/>
-                            
-                        
                     </>
-                    
-                    
+                    ) || (
+                        <p className="weatherP">Humm .. there seems to be an error in the name of the city</p>
+                    )   
                 }
-                
             </main>   
         );
         
                 }           
 export default Weather; 
-
