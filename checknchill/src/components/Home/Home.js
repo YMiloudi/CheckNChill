@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Weather from "../weather/Weather";
 import Quotes from '../dontforget/Quotes';
 import MoviesList from '../movies/MoviesList';
+import Maps from '../Map/Map';
 
 import Check from '../../assets/Check.png'
 import Chill from '../../assets/Chill.png'
@@ -21,6 +22,7 @@ const Home = () => {
     return(
         <div>
             <SearchCity onSearch={(searchValue) => isClicked(searchValue)}/> 
+            <Maps/>
             {
                 isSearched == true &&
                 <Weather cityValue = {searchValue}/> 
