@@ -27,7 +27,7 @@ const SearchCity = (props) => {
         }, 2700) 
     })
 
-    function searchBtnHanbleClick () {
+    function searchBtnHandleClick () {
         props.onSearch(searchValue)
     }
 
@@ -45,9 +45,9 @@ const SearchCity = (props) => {
                 <input 
                     onChange={(event)=>setSearchValue(event.target.value)} 
                     type="text" 
-                    placeholder="Chose your city" 
+                    placeholder="Choose your city" 
                     value={searchValue} />
-                <button onClick={()=>searchBtnHanbleClick()}><MdPlace /></button>
+                <button onClick={()=>searchBtnHandleClick()}><MdPlace /></button>
             </div>
         </div>
     )

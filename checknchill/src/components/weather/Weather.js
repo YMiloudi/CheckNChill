@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 
 import DontForget from '../dontforget/DontForget';
@@ -51,11 +51,11 @@ const Weather = (props) => {
    }
 
     
-    function getInfoByCityName(cityValue){
-        fetch("http://api.openweathermap.org/data/2.5/weather?q=" + cityValue + "&units=metric&APPID=9098e1580bce922eca2949d617a96532")
+    useEffect(() => {
+        fetch("http://api.openweathermap.org/data/2.5/weather?q=" + props.cityValue + "&units=metric&APPID=9098e1580bce922eca2949d617a96532")
         .then((resp)=>resp.json())
         .then((data) => onDataRetrieved(data));  //setWeather ne peut passer qu'une seule fonction. Donc, création d'une nouvelle fonction onDataRetrieved
-   }
+      }, [])
 
    function onDataRetrieved(data){ // Création de fonction, pour passer plusieurs lignes 
         setWeather(data);
@@ -83,7 +83,6 @@ const Weather = (props) => {
 
     return(
             <main> 
-                <SearchCity onSearch= {(cityValue) => getInfoByCityName(cityValue)}/> 
                 
                 {
                     weather != null &&
