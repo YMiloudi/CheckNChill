@@ -1,19 +1,67 @@
+body{
+  background-color: aliceblue;
+}
+
+#titleMain{
+  font-family: "Brush Script MT", cursive;
+  font-size: 80px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.underText{
+  line-height: 0.5;
+  text-align: center;
+  font-family: Garamond,serif; 
+  font-size: 20px;
+}
+
+.underText{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: black;
+
+}
+
+.underText:before, 
+.underText:after {
+  flex-grow: 1;
+  height: 2px;
+  content: '\a0';
+  background-color: #ddd;
+  position: relative;
+  top: 0.5em;
+}
+
+.underText:before {
+  margin-right:20px;
+}
+
+.underText:after {
+  margin-left:20px;
+}
+
+
 .ContainerAboutTop {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     font-size: large;
     margin-top: 50px;
     margin-left: 10%;
     margin-right: 10%;
   }
 
+
   .ContainerAboutBottom {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
     font-size: large;
     margin-top: 50px;
     margin-left: 10%;
