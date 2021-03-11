@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 
 
 import DontForget from '../dontforget/DontForget';
-import SearchCity from '../search/SearchCity';
+import MoviesList from '../movies/MoviesList';
 
 import {FaTemperatureHigh} from 'react-icons/fa';
 
@@ -86,7 +86,7 @@ const Weather = (props) => {
                 
                 {
                     weather != null &&
-                    <>
+                    <div id="boxes">
                         <div id="meteoBox">
                             <div className="location-box">
                                 <div className="location">
@@ -100,34 +100,39 @@ const Weather = (props) => {
                                 </div>
                             </div>
                             
-                            <div id="weatherContent">
-                                <div className="weather-box">
-                                                                
-                                    <div id="tempData">
-                                        <div className="temp">
-                                            <FaTemperatureHigh className="icons" />
-                                            <p className="weatherText"> {Math.round(weather.main.temp)}°C </p> 
-                                        </div>
-                                    
-                                        <div className="weather">
-                                            <p className="weatherText"> {weather.weather[0].main} </p>
-                                            <div>
-                                                {getLottie()}
-                                            </div>
+                            
+                            <div className="weather-box">
+                                                            
+                                <div id="tempData">
+                                    <div className="temp">
+                                        <FaTemperatureHigh className="icons" />
+                                        <p className="weatherText"> {Math.round(weather.main.temp)}°C </p> 
+                                    </div>
+                                
+                                    <div className="weather">
+                                        <p className="weatherText"> {weather.weather[0].main} </p>
+                                        <div>
+                                            {getLottie()}
                                         </div>
                                     </div>
-                                    
-                                    
                                 </div>
                                 
+                                
                             </div>
+                                
+                            
                         </div>
                         
                         <DontForget 
                             title={weather.main.temp}/>
                             
-                        
-                    </>
+                        <div id="Movies">
+                            
+                            <MoviesList/>
+
+                            <p>Copiright WCS Juan, Clara, Yousra et Nathalie...</p>
+                        </div>
+                    </div>
                     
                     
                 }

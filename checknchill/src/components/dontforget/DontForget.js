@@ -3,6 +3,8 @@ import './DontForget.css';
 import ClassCold from "./classcold.png";
 import ClassHot from "./classhot.png";
 
+import Quotes from "./Quotes";
+
 function DontForget(props){
 
     function getImage(){
@@ -21,8 +23,8 @@ function DontForget(props){
         }
     }
     return(
-        <div className="dontFrget">
-            <h1>so don't forget...</h1>
+        <div className="boxDontFrget">
+            <h1 id="dontforgtTitle">So don't forget...</h1>
             {/* 
             <div id="getgif">
                 {
@@ -36,7 +38,9 @@ function DontForget(props){
                 }
             </div>
 
-
+            <div id="quotes">
+                <Quotes />
+            </div>
         </div>
     )
 }

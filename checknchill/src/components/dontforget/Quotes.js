@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './Quotes.css'
 
+import {BsFillChatQuoteFill} from "react-icons/bs";
+import {FaAngleDoubleRight} from "react-icons/fa";
 
 const Quotes = () => {
 
@@ -21,15 +23,24 @@ const Quotes = () => {
     }, [])
 
     return (
-        <div className="quoteContainer">
+        
+        <div id="quoteBox"> 
+            <hr align="center" />
+            
             <div className="quote">
-                <p className = "quoteText">{quote.text}</p>
-                <p>Author: {quote.author}</p>
-
-                <div className="btnContainer">
-                    <button onClick={getQuote} className="btn">Get another quote !</button>
-                </div>
+                    <div id="quoteContent">
+                        <p id="quoteIcon"><BsFillChatQuoteFill /></p>
+                        <div className="quoteText">
+                            <p id= "quoteStence">{quote.text}</p>
+                            <p id="quoteAuthor">Quote from {quote.author}</p>
+                        </div>
+                    </div>
+                    <div className="btnContainer">
+                        <p>Not inspired ? </p>
+                        <button id="quoteBtn" onClick={getQuote} className="btn">Get another quote <FaAngleDoubleRight id="quoteBtnIcon" /></button>
+                    </div>
             </div>
+        
         </div>
     )
 }
