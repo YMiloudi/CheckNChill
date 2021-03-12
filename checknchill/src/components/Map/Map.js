@@ -28,11 +28,15 @@ function Map() {
     }
   );
   return (
-    <GoogleMap
-      defaultZoom={12}
-      defaultCenter={{ lat: 48.856613, lng: 2.352222 }}
-    > 
-    </GoogleMap>
+    
+    <div id="mapBoxContent">
+      
+      <GoogleMap
+        defaultZoom={12}
+        defaultCenter={{ lat: 48.856613, lng: 2.352222 }}
+      > 
+      </GoogleMap>
+    </div>
   );
 }
 
@@ -42,17 +46,42 @@ const WrappedMap = withScriptjs(withGoogleMap(Map));
 export default function Maps() {
   return (
     <div className="map">
-  
-      <div className="mapStyle">
+      <h1>And go chill outside</h1>
+      
+        <div className="mapStyle">           
+          <WrappedMap
+          /*Here the API Key "AIzaSyDe7b2AlZGDtxggir5M9knmgSfgIVV_k_k"*/
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe7b2AlZGDtxggir5M9knmgSfgIVV_k_k&v=3.exp&libraries=geometry,drawing,places"
+            loadingElement={<div style={{ height: "350px", width: "350px" }} />}
+            containerElement={<div style={{ height: "350px", width: "350px" }} />}
+            mapElement={<div style={{ height: "350px", width: "350px" }} />}>
+            </WrappedMap>
+        
+
+          <div className="checkBox">
           
-        <WrappedMap
-        /*Here the API Key "AIzaSyDe7b2AlZGDtxggir5M9knmgSfgIVV_k_k"*/
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe7b2AlZGDtxggir5M9knmgSfgIVV_k_k&v=3.exp&libraries=geometry,drawing,places"
-          loadingElement={<div style={{ height: "100%" }} />}
-          containerElement={<div style={{ height: "100%" }} />}
-          mapElement={<div style={{ height: "100%" }} />}>
-          </WrappedMap>
-      </div>
+            <label className="container">Go for a drink
+              <input type="checkbox" checked="checked" />
+              <span className="checkmark"></span>
+            </label>
+
+            <label className="container">Go to the park
+              <input type="checkbox" checked="checked" />
+              <span className="checkmark"></span>
+            </label>
+
+            <label className="container">Go shopping
+              <input type="checkbox" checked="checked" />
+              <span className="checkmark"></span>
+            </label>
+
+            <label className="container">Go to an exhibition
+              <input type="checkbox" checked="checked" />
+              <span className="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      
     </div>
   );
 }

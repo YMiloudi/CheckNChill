@@ -5,6 +5,7 @@ import DontForget from '../dontforget/DontForget';
 import SearchCity from '../search/SearchCity';
 
 import {FaTemperatureHigh} from 'react-icons/fa';
+import {TiWeatherWindyCloudy} from 'react-icons/ti';
 
 import Lottie from 'react-lottie';
 import animationData from '../../clouds.json'; 
@@ -67,16 +68,18 @@ const Weather = (props) => {
         
     function getLottie(){
         if(weather.main.temp >= 15){
-            return <Lottie 
+            return <Lottie
             options={defaultOptionsSunny}
             height={300}
             width={300}
+            speed={0.3}
             />
             }else{
             return <Lottie 
             options={defaultOptions}
             height={300}
             width={300}
+            speed={0.3}
             />
                 }
             }
@@ -88,33 +91,37 @@ const Weather = (props) => {
                 {
                     weather != null && weather.cod != "404" && (
                         <>
-                        <div id="meteoBox">
-                            <div className="location-box">
-                                <div className="location">
-                                    
-                                    <div className="date">
-                                        <h2>{dateBuilder(new Date())}</h2>
-                                    </div> 
-                                    
-                                    <h1>What's the weather like in <br />{weather.name}, {weather.sys.country} ?</h1>
-     
+                        <div id="boxes">
+                            <div id="meteoBox">
+                                <div className="location-box">
+                                    <div className="location">
+                                        
+                                        <div className="date">
+                                            <h2>{dateBuilder(new Date())}</h2>
+                                        </div> 
+                                        
+                                        <h1>What's the weather like in <br />{weather.name}, {weather.sys.country} ?</h1>
+        
+                                    </div>
                                 </div>
-                            </div>
-                            
-                            <div id="weatherContent">
-                                <div className="weather-box">
-                                                                
-                                    <div id="tempData">
-                                        <div className="temp">
-                                            <FaTemperatureHigh className="icons" />
-                                            <p className="weatherText"> {Math.round(weather.main.temp)}°C </p> 
-                                        </div>
-                                    
-                                        <div className="weather">
-                                            <p className="weatherText"> {weather.weather[0].main} </p>
-                                            <div>
-                                                {getLottie()}
+                                
+                                <div id="weatherContent">
+                                    <div className="weather-box">
+                                                                    
+                                        <div id="tempData">
+                                            <div className="temp">
+                                                <FaTemperatureHigh className="icons" />
+                                                <p className="weatherText"> {Math.round(weather.main.temp)}°C </p> 
                                             </div>
+                                        
+                                            <div className="weather">
+                                                <TiWeatherWindyCloudy className="icons" />
+                                                <p className="weatherText"> {weather.weather[0].main} </p>
+                                                
+                                            </div>
+                                        </div>
+                                        <div className="getLottie">
+                                            {getLottie()}
                                         </div>
                                     </div>
                                 </div>

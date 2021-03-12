@@ -30,15 +30,16 @@ const Home = () => {
 
             <h1 id="titleMain">CheckNChill</h1>
             <p className="underText">The new app you were waiting for</p>
+
+        
             {
                 isSearched == true &&
-                <>
+                <div id="boxes">
                 <Weather cityValue = {searchValue}/> 
-                <Maps/>
-                <Quotes/>
                 <MoviesList/> 
-                <Footer/> 
-                </>
+                <Maps/>
+                </div> 
+
             }
 
             {
