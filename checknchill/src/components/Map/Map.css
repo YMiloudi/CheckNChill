@@ -1,21 +1,47 @@
 .mapStyle {
-     width:700px;
-     height: 300px;
-     margin: 75px 250px 75px 250px ;
-     border-radius: 5px;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 800px;
+  height: 300px;
+  margin: 15px 250px 75px 250px ;
+  border-radius: 5px;
+}
 
-  .map{
+.map{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+background-color: #91d2d9;
+padding: 15px 20px 0px 20px;
+margin: 20px 250px 20px 250px;
+border-radius: 5px;
+box-shadow: 1px 1px 3px rgb(36, 36, 36);
+width: 800px;
+height: 450px;
+}
+  .map h1{
+    padding-top: 50px;
+  }
+  
+  .mapContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
+  
+  .checkBox{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(145, 210, 270, 1);
-    padding: 0px 20px;
-    margin: 75px 250px 75px 250px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgb(36, 36, 36);
-    max-width: 800px;
-    height: 400px;
-    box-shadow: 2px 2px 5px rgb(54, 54, 54);
+  }
+  
+  .container{
+    padding: 5px;
+  }
+  
+  .container input{
+    width: 15px;
+    padding-left: 10px;
   }

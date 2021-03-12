@@ -28,14 +28,14 @@ const Home = () => {
 
             <h1 id="titleMain">CheckNChill</h1>
             <p className="underText">The new app you were waiting for</p>
-            <Maps/>
+            
             {
                 isSearched == true &&
-                <>
+                <div id="boxes">
                 <Weather cityValue = {searchValue}/> 
-                <Quotes/>
-                <MovieList/> 
-                </>
+                <MoviesList/> 
+                <Maps />
+                </div>
             }
 
             {
@@ -47,15 +47,12 @@ const Home = () => {
                         <h3 id="titleAbout">
                             Why CheckNChill ? 
                         </h3>
-                        <p id="textAbout">
-                        <p>Changing your plans due to the weather can be very frustrating! 
-                        <br>
-                        </br>
-                        Imagine yourself. It’s been 2 months since you planned to go to the sea with your friends and at the last minute, 
-                        <br></br>everything is cancelled because of the weather! 
-                        It’s so frustrating, right? <br>
-                        </br>That’s why we created this app, just for you!</p>
-                        </p>
+                        <p className="textAbout">
+                            Changing your plans due to the weather can be very frustrating!
+                            Imagine yourself. 
+                            It’s been 2 months since you planned to go to the sea with your friends and at the last minute,everything is cancelled because of the weather! 
+                            It’s so frustrating, right?
+                            That’s why we created this app, just for you!</p>
                     </div>
                 </div>
 
@@ -64,20 +61,17 @@ const Home = () => {
                             <h3 id="titleAbout">
                             Just check it... and chill ! 
                             </h3>
-                            <img id="imageAbout" src={Chill}/>
-                            <p id="textAbout">
-                            <p>
-                            The application CheckNChill was created by an observation. 
-                            <br></br> 
-                            It is very complicated to organize an activity because of the weather that can sometimes be changing. <br>
-                            </br>CheckNchill announces the weather first, but on top of that it reminds you of the essentials to take with you.
-                            <br></br>
-                            You can also enjoy a daily quote that will inspire your day! 
-                            <br></br>
-                            On sunny days the app offers you ideas for outdoor activities, such as the nicest bars in your area ! And when it rains, the app proposes you to watch nice movies at home!
-                            <br></br>
-                            CheckNChill is THE app that you need ! 
-                            </p></p>
+                            <div id="content">
+                                <img id="imageAbout" src={Chill}/>
+                                <p id="textAboutBottom">
+                                    The application CheckNChill was created by an observation. 
+                                    It is very complicated to organize an activity because of the weather that can sometimes be changing.
+                                    CheckNchill announces the weather first, but on top of that it reminds you of the essentials to take with you.
+                                    You can also enjoy a daily quote that will inspire your day! 
+                                    On sunny days the app offers you ideas for outdoor activities, such as the nicest bars in your area ! And when it rains, the app proposes you to watch nice movies at home!
+                                    CheckNChill is THE app that you need ! 
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
