@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Weather from "../weather/Weather";
 import Quotes from '../dontforget/Quotes';
-import MovieList from '../movies/MoviesList';
+
+
+import MoviesList from '../movies/MoviesList';
+import Maps from '../Map/Map';
+
 
 import Check from '../../assets/Check.png';
 import Chill from '../../assets/Chill.png';
@@ -21,8 +25,10 @@ const Home = () => {
     return(
         <div>
             <SearchCity onSearch={(searchValue) => isClicked(searchValue)}/> 
+
             <h1 id="titleMain">CheckNChill</h1>
             <p className="underText">The new app you were waiting for</p>
+            <Maps/>
             {
                 isSearched == true &&
                 <>
