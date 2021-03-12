@@ -3,3 +3,70 @@
     width: 100%;
     margin-bottom: 2%;
   }
+  
+  #movieBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #91d2d9;
+    padding: 15px 20px 0px 20px;
+    margin: 20px 250px 20px 250px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgb(36, 36, 36);
+    width: 800px;
+    height: 500px;
+  }
+  
+  #movieBox h1{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .slick-dots{
+    bottom: 0px;
+    margin-bottom: 40px;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: black;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 15px;
+    line-height: 20px;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+  button {
+    appearance: auto;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    font: 400 13.3333px Arial;
+    border-radius: 50%;
+  }

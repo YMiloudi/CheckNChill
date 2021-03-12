@@ -1,16 +1,34 @@
 import React from 'react';
+
 import './DontForget.css';
-import ClassCold from "./classcold.png";
-import ClassHot from "./classhot.png";
+import Quotes from "./Quotes";
+
+import Boots from "../../assets/Boots.png"
+import Beanie from "../../assets/Beanie.png"
+import Gloves from "../../assets/Gloves.png"
+import Scarf from "../../assets/Scarf.png"
+import Umbrella from "../../assets/Umbrella.png"
+import Jacket from "../../assets/Jacket.png"
+import Sunscreen from "../../assets/Sunscreen.png"
+import Sunglasses from "../../assets/Sunglasses.png"
 
 function DontForget(props){
 
     function getImage(){
         if(props.title >18){
-            return <img src={ClassHot} className="vetement"/>;
+            return <div className="pictos">
+                <img src={Jacket} alt="Jacket" />
+                <img src={Sunglasses} alt="Sun glasses" />
+                <img src={Sunscreen} alt="Sunscreen" />
+            </div>
         }else{
-            return <img src={ClassCold} className="vetement"/>;
-        }
+            return <div className="pictos">
+                <img src={Beanie} alt="Beanie" />
+                <img src={Boots} alt="Boots" />
+                <img src={Gloves} alt="Gloves" />
+                <img src={Scarf} alt="Scarf" />
+            </div>        
+            }
     }
 
     function getGif(){
@@ -21,22 +39,20 @@ function DontForget(props){
         }
     }
     return(
-        <div className="dontFrget">
-            <h1>so don't forget...</h1>
-            {/* 
-            <div id="getgif">
-                {
-                    getGif()
-                }
-            </div>
-            */} 
+        <div className="boxDontFrget">
+            <h1 id="dontforgtTitle">So don't forget...</h1>
+
             <div id="getimage">
-                {
-                    getImage()
-                }
+                <div>
+                    {
+                        getImage()
+                    }
+                </div>
             </div>
 
-
+            <div id="quotes">
+                <Quotes />
+            </div>
         </div>
     )
 }

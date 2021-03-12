@@ -5,7 +5,8 @@ import Slider from 'react-slick';
 // import CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './Movie.css'
+
+import './MoviesList.css'
 
 function MoviesList(){
 
@@ -53,7 +54,8 @@ function MoviesList(){
     };
 
     return(
-        <div>
+        <div id="movieBox">
+            <h1>Or stay home and Chill on TV</h1>
             <Slider {...settings}>
                 {   
                     movies != null &&
