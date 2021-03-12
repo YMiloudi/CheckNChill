@@ -34,7 +34,7 @@ const Home = () => {
                 <>
                 <Weather cityValue = {searchValue}/> 
                 <Quotes/>
-                <MovieList/> 
+                <MoviesList/> 
                 </>
             }
 
