@@ -33,6 +33,7 @@ const Home = () => {
                 isSearched == true &&
                 <div id="boxes">
                 <Weather cityValue = {searchValue}/> 
+
                 <MoviesList/> 
                 <Maps />
                 </div>
