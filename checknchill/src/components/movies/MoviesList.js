@@ -55,7 +55,7 @@ function MoviesList(){
 
     return(
         <div id="movieBox">
-            <h1>Or stay home and Chill on TV</h1>
+            <h1 id="title">Or stay home and Chill on TV</h1>
             <Slider {...settings}>
                 {   
                     movies != null &&
