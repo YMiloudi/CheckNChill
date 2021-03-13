@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Weather from "../weather/Weather";
-import Quotes from '../dontforget/Quotes';
 
 
 import MoviesList from '../movies/MoviesList';
