@@ -5,6 +5,14 @@
     margin: 0px !important;
 }
 
+.slick-slide{
+    width: 350px;
+}
+
+.slick-slider{
+    top: 20px;
+}
+
 .effect:hover .overlay {
     height: 100%;
 }
@@ -19,6 +27,12 @@
 .transition {
     width: 200px;
     border-radius: 0.4rem;
+}
+
+.transition img {
+    width: 200px;
+    border-radius: 0.4rem;
+    box-shadow: 1px 1px 2px rgb(110, 110, 110);
 }
   
 .transition:hover {
@@ -60,13 +74,37 @@
 
 .text {
     color: white !important;
-    font-size: 1.5rem;
+    font-size: 1rem;
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 15%;
     right: 15%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: scale(1.1);
     text-align: center;
+}
+
+@media screen and (max-width: 1050px) and (min-width:769px){
+
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+
+}
+
+@media screen and (max-width: 500px) {
+    .slick-slide{
+        width: 350px;
+    }
+    
+    .slick-slider{
+        top: 20px;
+        width: inherit !important;
+    }
+
+    .slick-list{
+        margin-left: 0px !important;
+    }
 }
