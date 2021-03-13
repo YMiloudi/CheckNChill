@@ -13,15 +13,30 @@ import Chill from '../../assets/Chill.png';
 import '../Home/Home.css'
 import SearchCity from "../search/SearchCity";
 
-const Home = () => {
+const Home = (props) => {
     
     const [isSearched, setIsSearched] = useState(false);
     const [searchValue, setSearchValue] = useState("");
+    const [temperature, setTemperature] = useState(0);
     
     function isClicked(searchValue){
         setIsSearched(true);
         setSearchValue(searchValue)
     }
+
+    function getActivity(){
+        if(temperature >18){
+            return  <div>
+                        <Maps/>
+                    </div> 
+            
+        }else{
+            return <div>
+                    <MoviesList/> 
+                </div>
+                   
+            }
+        }
     return(
         <div>
             <SearchCity onSearch={(searchValue) => isClicked(searchValue)}/> 
@@ -32,10 +47,13 @@ const Home = () => {
             {
                 isSearched == true &&
                 <div id="boxes">
-                <Weather cityValue = {searchValue}/> 
+                <Weather cityValue = {searchValue} onGetWeather={(data)=>setTemperature(data.main.temp)}/> 
 
-                <MoviesList/> 
-                <Maps />
+                {
+                    getActivity()
+                }
+                {/*<MoviesList/> 
+                <Maps />*/}
                 </div>
             }
 
