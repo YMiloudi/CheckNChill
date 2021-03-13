@@ -79,7 +79,7 @@ const SearchCity = (props) => {
                 <input 
                     onChange={(event)=>setSearchValue(event.target.value)} 
                     type="text" 
-                    placeholder="Chose your city" 
+                    placeholder="Choose your city" 
                     value={searchValue} />
                 <button 
                     id="searchBtn" 
