@@ -61,6 +61,7 @@ const Weather = (props) => {
        //console.log(data)
        //console.log("test", weather != null && weather.cod != "404")  
         setWeather(data);
+        props.onGetWeather(data)
    }
 
    //SearchCity va récup le onSearch (valeur de l'input), on lui assigne une valeur. Cette valeur va être utiliser dans une fonction
